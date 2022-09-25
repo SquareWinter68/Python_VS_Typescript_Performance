@@ -48,7 +48,6 @@ var Merge_sort_performance = /** @class */ (function () {
             for (var _ = 0; _ < array_size_range; _++) {
                 placeholder.push(Math.floor((Math.random() * element_size_range)) + 1);
             }
-            //console.log(placeholder);
             arr.push(placeholder);
         }
         var start_time = performance.now();
@@ -57,8 +56,6 @@ var Merge_sort_performance = /** @class */ (function () {
         }
         var stop_time = performance.now();
         var total_time = stop_time - start_time;
-        //return `${function_name} ran for ${times_to_run} times`
-        //return `${function_name} ran for ${times_to_run} times.\nIt finnished in ${total_time} milliseconds`
         return [total_time, times_to_run, array_size_range, element_size_range];
     };
     Merge_sort_performance.prototype.GenerateData = function (error_correction, max_array_size, start_at, jump_by, element_size_range) {
@@ -71,7 +68,6 @@ var Merge_sort_performance = /** @class */ (function () {
     Merge_sort_performance.prototype.Write_to_csv = function (file_path, filename) {
         var createCsvWriter = require('csv-writer').createObjectCsvWriter;
         var csvWriter = createCsvWriter({
-            //path: `C:/Users/Vukasin/Desktop/google_foobar/ts_bullshit/csv_files/${filename}`,
             path: "".concat(file_path, "/").concat(filename),
             header: [
                 { id: 'size', title: 'Array_size' },
@@ -87,4 +83,4 @@ var Merge_sort_performance = /** @class */ (function () {
     };
     return Merge_sort_performance;
 }());
-var x = new Merge_sort_performance(3, 50000, 100, 100, 1000, "C:/Users/Vukasin/Desktop/algs_and_ds/CSV_speed_data", "Typescript_speed.csv");
+var x = new Merge_sort_performance(3, 50000, 100, 100, 1000, "Directory path in which the file is to be saved", "filename.csv");

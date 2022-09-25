@@ -66,7 +66,6 @@ class Merge_sort_performance {
                     placeholder.push(Math.floor((Math.random()*element_size_range))+1);
     
                 }
-            //console.log(placeholder);
             arr.push(placeholder);
         }
     
@@ -77,8 +76,6 @@ class Merge_sort_performance {
         }
         let stop_time = performance.now();
         let total_time = stop_time-start_time;
-        //return `${function_name} ran for ${times_to_run} times`
-        //return `${function_name} ran for ${times_to_run} times.\nIt finnished in ${total_time} milliseconds`
         return [total_time, times_to_run, array_size_range, element_size_range]
     }
 
@@ -93,7 +90,6 @@ class Merge_sort_performance {
     Write_to_csv(file_path:string, filename:string){
         const createCsvWriter = require('csv-writer').createObjectCsvWriter;
         const csvWriter = createCsvWriter({
-            //path: `C:/Users/Vukasin/Desktop/google_foobar/ts_bullshit/csv_files/${filename}`,
             path : `${file_path}/${filename}`,
             header: [
                 {id: 'size', title: 'Array_size'},
