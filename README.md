@@ -11,4 +11,7 @@ The code for the graph generation is provided as well
 
 I have lso thought of adding C and C#, to this list after a while. 
 
+*Note yes I am aware that typescript has the same performance as js since it just gets transpiled into javascript anyways.
+
+
 ## Feel free to contribute with other programming languages

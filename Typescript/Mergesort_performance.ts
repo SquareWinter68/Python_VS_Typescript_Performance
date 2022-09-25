@@ -111,5 +111,5 @@ class Merge_sort_performance {
     }
 }
 
-let x = new Merge_sort_performance(3, 50000, 100, 100, 1000, "C:/Users/Vukasin/Desktop/algs_and_ds/CSV_speed_data", "Typescript_speed.csv");
+let x = new Merge_sort_performance(3, 50000, 100, 100, 1000, "Directory path in which the file is to be saved ", "filename.csv");
 

@@ -7,8 +7,8 @@ import numpy as np
 class Plot_performances:
 
     def __init__(self, start=None, stop=None):
-        self.pyfile = pd.read_csv(r"C:\Users\Vukasin\Desktop\algs_and_ds\py_vs_ts_gh\CSV_speed_data\Python_speed.csv")
-        self.tsfile = pd.read_csv(r"C:\Users\Vukasin\Desktop\algs_and_ds\py_vs_ts_gh\CSV_speed_data\Typescript_speed.csv")
+        self.pyfile = pd.read_csv(r"path to your python csv data")
+        self.tsfile = pd.read_csv(r"Path to your typescript csv data")
         error_correction = self.pyfile["Times_to_run"][1]
 
         if start and stop:
