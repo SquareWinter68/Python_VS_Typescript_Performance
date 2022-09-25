@@ -7,8 +7,8 @@ import numpy as np
 class Plot_performances:
 
     def __init__(self, start=None, stop=None):
-        self.pyfile = pd.read_csv(r"C:\Users\Vukasin\Desktop\algs_and_ds\CSV_speed_data\Python_speed.csv")
-        self.tsfile = pd.read_csv(r"C:\Users\Vukasin\Desktop\algs_and_ds\CSV_speed_data\Typescript_speed.csv")
+        self.pyfile = pd.read_csv(r"C:\Users\Vukasin\Desktop\algs_and_ds\py_vs_ts_gh\CSV_speed_data\Python_speed.csv")
+        self.tsfile = pd.read_csv(r"C:\Users\Vukasin\Desktop\algs_and_ds\py_vs_ts_gh\CSV_speed_data\Typescript_speed.csv")
         error_correction = self.pyfile["Times_to_run"][1]
 
         if start and stop:
@@ -98,6 +98,6 @@ class Plot_performances:
 
 #print(array_size,time)
 
-x = Plot_performances(start=1, stop=100)
-x.Matplotlib(typescript=True, save=True)
-#x.Pygal(typescript=True, bar_chart=True, fit_screen=True)
+x = Plot_performances(start=1, stop=500)
+#x.Matplotlib(typescript=True, save=True)
+x.Pygal(python=True, bar_chart=True, )
